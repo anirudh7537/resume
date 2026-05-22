@@ -15,11 +15,12 @@
 
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #525659; /* Dark background to make the A4 page pop */
+        background-color: #525659; /* Dark background to make the A4 page pop on screen */
         color: #111;
         display: flex;
         justify-content: center;
         padding: 20px;
+        -webkit-font-smoothing: antialiased;
     }
 
     /* Strict A4 Page Setup */
@@ -27,26 +28,27 @@
         width: 210mm;
         height: 297mm;
         background: #ffffff;
-        padding: 12mm 15mm; /* Standard professional margins */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        overflow: hidden; /* Ensures it strictly stays one page */
+        /* Reduced padding from 15mm 20mm to 12mm 15mm to gain vertical space */
+        padding: 12mm 15mm; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         position: relative;
+        overflow: hidden;
     }
 
-    /* Typography & Spacing designed to fit 1 page */
+    /* Typography & Spacing optimized for 1 page */
     .header {
         text-align: center;
         border-bottom: 2px solid #2563eb;
-        padding-bottom: 10px;
-        margin-bottom: 15px;
+        padding-bottom: 10px; /* Reduced */
+        margin-bottom: 14px; /* Reduced */
     }
 
     .header h1 {
-        font-size: 24pt;
+        font-size: 22pt; /* Slightly scaled down */
         color: #111827;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
 
     .header h2 {
@@ -54,7 +56,7 @@
         color: #2563eb;
         font-weight: 600;
         letter-spacing: 0.5px;
-        margin-bottom: 8px;
+        margin-bottom: 6px; /* Reduced */
     }
 
     .contact-info {
@@ -72,7 +74,7 @@
     }
 
     .section {
-        margin-bottom: 16px;
+        margin-bottom: 14px; /* Reduced from 18px */
     }
 
     .section-title {
@@ -81,18 +83,18 @@
         text-transform: uppercase;
         font-weight: bold;
         border-bottom: 1px solid #d1d5db;
-        padding-bottom: 3px;
-        margin-bottom: 10px;
+        padding-bottom: 4px;
+        margin-bottom: 10px; /* Reduced */
     }
 
     ul {
-        padding-left: 18px;
+        padding-left: 20px;
     }
 
     li {
-        margin-bottom: 4px;
+        margin-bottom: 4px; /* Reduced from 6px */
         font-size: 10pt;
-        line-height: 1.4;
+        line-height: 1.4; /* Tighter line-height */
         color: #222;
     }
 
@@ -113,7 +115,7 @@
         font-style: italic;
         color: #444;
         font-size: 10pt;
-        margin-bottom: 4px;
+        margin-bottom: 4px; /* Reduced */
     }
 
     .entry-date {
@@ -126,7 +128,7 @@
     .skills-grid {
         display: grid;
         grid-template-columns: 180px 1fr;
-        gap: 6px 10px;
+        gap: 6px 10px; /* Reduced vertical gap */
         font-size: 10pt;
         line-height: 1.4;
     }
@@ -136,7 +138,7 @@
         color: #111827;
     }
 
-    /* Print settings to ensure A4 output */
+    /* Perfect A4 Print Settings */
     @page {
         size: A4;
         margin: 0;
@@ -146,17 +148,17 @@
         body {
             background: none;
             padding: 0;
+            margin: 0;
             display: block;
         }
         .a4-page {
             box-shadow: none;
-            width: 100%;
-            height: 100%;
+            width: 210mm;
+            height: 297mm;
             padding: 12mm 15mm;
             margin: 0;
-            page-break-after: avoid;
+            page-break-after: avoid; 
         }
-        /* Ensures links remain plain text colored when printing */
         .contact-info a {
             color: #111;
             text-decoration: none;
@@ -220,25 +222,20 @@
         </div>
     </div>
 
-  <div class="section">
+    <div class="section">
         <div class="section-title">Projects</div>
         
         <div class="entry-header">
-            <div class="entry-title">
-                Exploratory Sales Data Analysis | <a href="https://anirudh7537.github.io/exploratory-sales-analysis/" target="_blank">View</a>
-            </div>
+            <div class="entry-title">Exploratory Sales Data Analysis</div>
             <div class="entry-date">Python Data Project</div>
         </div>
         <ul>
-            <li><strong>Data Cleaning & Preparation:</strong> Engineered a data preprocessing pipeline using Pandas to handle missing values and format datetime objects, ensuring accurate datasets for analysis.</li>
-            <li><strong>Exploratory Data Analysis (EDA):</strong> Designed clear visual dashboards (line and bar charts) using Seaborn to uncover monthly revenue trends and identify top-performing product categories.</li>
-            <li><strong>Business Intelligence Extraction:</strong> Programmed foundational Python logic to calculate and extract crucial Key Performance Indicators (KPIs), including Average Order Value, to drive data-driven decision-making.</li>
+            <li>Conducted data cleaning, manipulation, and exploratory data analysis (EDA) on a public sales dataset utilizing Python to uncover business trends.</li>
+            <li>Utilized foundational Python logic to extract key performance metrics, reinforcing practical analytical skills relevant to data-driven decision-making.</li>
         </ul>
 
-        <div class="entry-header" style="margin-top: 12px;">
-            <div class="entry-title">Personal Portfolio Website | <a href="https://anirudh-gandhi-portfolio.vercel.app/" target="_blank">Veiw</a>
-            
-            </div>
+        <div class="entry-header" style="margin-top: 10px;">
+            <div class="entry-title">Personal Portfolio Website</div>
             <div class="entry-date">Web Development Project</div>
         </div>
         <ul>
