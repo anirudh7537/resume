@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anirudh Gandhi - Resume</title>
+
+<style>
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #525659; /* Dark background to make the A4 page pop */
+        color: #111;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Strict A4 Page Setup */
+    .a4-page {
+        width: 210mm;
+        height: 297mm;
+        background: #ffffff;
+        padding: 12mm 15mm; /* Standard professional margins */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden; /* Ensures it strictly stays one page */
+        position: relative;
+    }
+
+    /* Typography & Spacing designed to fit 1 page */
+    .header {
+        text-align: center;
+        border-bottom: 2px solid #2563eb;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .header h1 {
+        font-size: 24pt;
+        color: #111827;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    .header h2 {
+        font-size: 11pt;
+        color: #2563eb;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+    }
+
+    .contact-info {
+        font-size: 9.5pt;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .contact-info a {
+        color: #2563eb;
+        text-decoration: none;
+    }
+
+    .section {
+        margin-bottom: 16px;
+    }
+
+    .section-title {
+        font-size: 12pt;
+        color: #111827;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid #d1d5db;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    li {
+        margin-bottom: 4px;
+        font-size: 10pt;
+        line-height: 1.4;
+        color: #222;
+    }
+
+    .entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2px;
+    }
+
+    .entry-title {
+        font-weight: bold;
+        color: #111827;
+        font-size: 11pt;
+    }
+
+    .entry-subtitle {
+        font-style: italic;
+        color: #444;
+        font-size: 10pt;
+        margin-bottom: 4px;
+    }
+
+    .entry-date {
+        font-size: 9.5pt;
+        color: #555;
+        font-weight: 500;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 6px 10px;
+        font-size: 10pt;
+        line-height: 1.4;
+    }
+
+    .skill-category {
+        font-weight: bold;
+        color: #111827;
+    }
+
+    /* Print settings to ensure A4 output */
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    @media print {
+        body {
+            background: none;
+            padding: 0;
+            display: block;
+        }
+        .a4-page {
+            box-shadow: none;
+            width: 100%;
+            height: 100%;
+            padding: 12mm 15mm;
+            margin: 0;
+            page-break-after: avoid;
+        }
+        /* Ensures links remain plain text colored when printing */
+        .contact-info a {
+            color: #111;
+            text-decoration: none;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="a4-page">
+
+    <div class="header">
+        <h1>Anirudh Gandhi</h1>
+        <h2>Aspiring Data Analyst | B.Tech Student</h2>
+        <div class="contact-info">
+            <span>Jaipur, Rajasthan, India</span> | 
+            <span>+91-7073690238</span> | 
+            <a href="mailto:anirudhgandhi2@gmail.com">anirudhgandhi2@gmail.com</a>
+        </div>
+        <div class="contact-info" style="margin-top: 4px;">
+            <a href="https://www.linkedin.com/in/anirudh-gandhi-95086232a/" target="_blank">linkedin.com/in/anirudh-gandhi</a> | 
+            <a href="https://github.com/anirudh7537" target="_blank">github.com/anirudh-gandhi</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <ul>
+            <li>Detail-oriented third-year B.Tech student at Global Institute of Technology passionate about data analytics and technology.</li>
+            <li>Recognized for academic excellence, securing the top rank in the batch during the first year of the program.</li>
+            <li>Proactive self-learner with hands-on experience in exploratory data analysis (EDA), Python programming, and web development.</li>
+            <li>Seeking to leverage analytical and problem-solving skills to build a career as a Data Analyst while expanding practical project experience.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        
+        <div class="entry-header">
+            <div class="entry-title">Global Institute of Technology</div>
+            <div class="entry-date">Expected Graduation: 2028</div>
+        </div>
+        <div class="entry-subtitle">Bachelor of Technology (B.Tech) - Third Year</div>
+        <ul>
+            <li><strong>Achievement:</strong> Secured Top Rank in the batch during the first year, demonstrating strong academic dedication and technical aptitude.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        
+        <div class="skills-grid">
+            <div class="skill-category">Programming Languages:</div>
+            <div>Python (Foundations), HTML, CSS, JavaScript (Basics)</div>
+            
+            <div class="skill-category">Core Competencies:</div>
+            <div>Data Analytics, Web Development, Problem Solving, Exploratory Data Analysis (EDA)</div>
+            
+            <div class="skill-category">Interpersonal Skills:</div>
+            <div>Continuous Self-Learning, Adaptability, Team Collaboration</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Projects</div>
+        
+        <div class="entry-header">
+            <div class="entry-title">Exploratory Sales Data Analysis</div>
+            <div class="entry-date">Python Data Project</div>
+        </div>
+        <ul>
+            <li>Conducted data cleaning, manipulation, and exploratory data analysis (EDA) on a public sales dataset utilizing Python to uncover business trends.</li>
+            <li>Utilized foundational Python logic to extract key performance metrics, reinforcing practical analytical skills relevant to data-driven decision-making.</li>
+        </ul>
+
+        <div class="entry-header" style="margin-top: 12px;">
+            <div class="entry-title">Personal Portfolio Website</div>
+            <div class="entry-date">Web Development Project</div>
+        </div>
+        <ul>
+            <li>Designed and developed a responsive digital portfolio to effectively showcase technical skills, projects, and academic accomplishments.</li>
+            <li>Implemented clean UI/UX practices to ensure cross-device compatibility and improve practical web development proficiency.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Extracurricular Activities</div>
+        <ul>
+            <li><strong>Hackathons:</strong> Participated in technical hackathons, collaborating in fast-paced environments to conceptualize and develop functional solutions.</li>
+            <li><strong>Upskilling Initiatives:</strong> Actively focused on transitioning into data analytics by pursuing relevant certifications, expanding technical knowledge through self-learning, and exploring data-driven projects.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
